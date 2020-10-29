@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <BlazorWebAssemblyLazyLoad Include="MyComponents.dll" />
+    <BlazorWebAssemblyLazyLoad Include="System.Linq.Queryable.dll" />
     <BlazorWebAssemblyLazyLoad Include="MyComponentsDependency1.dll" />
   </ItemGroup>
 

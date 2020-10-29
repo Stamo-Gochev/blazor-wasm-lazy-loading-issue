@@ -3,4 +3,12 @@
     This Blazor component is defined in the <strong>MyComponents</strong> package.
 </div>
 
+<div>data</div>
+<div>
+    @for (int i = 0; i < Data?.Count(); i++)
+    {
+        <div>@Data[i]</div>
+    }
+</div>
+
 <MyComponentsDependency1.DependencyComponent></MyComponentsDependency1.DependencyComponent>
