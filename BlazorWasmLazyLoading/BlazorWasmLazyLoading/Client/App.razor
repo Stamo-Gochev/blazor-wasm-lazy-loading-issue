@@ -1,0 +1,53 @@
+@using System.Reflection
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.WebAssembly.Services
+@inject LazyAssemblyLoader assemblyLoader
+
+<Router AppAssembly="@typeof(Program).Assembly"
+        AdditionalAssemblies="@lazyLoadedAssemblies"
+        OnNavigateAsync="@OnNavigateAsync">
+    <Navigating>
+        <div style="padding:20px;background-color:blue;color:white">
+            <p>Loading the requested page...</p>
+        </div>
+    </Navigating>
+
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+    </Found>
+
+    <NotFound>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <p>Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
+
+@code {
+
+
+    private List<Assembly> lazyLoadedAssemblies = new List<Assembly>();
+
+    private async Task OnNavigateAsync(NavigationContext args)
+    {
+        try
+        {
+            if (args.Path.Contains("counter"))
+            {
+                var assemblies = await assemblyLoader.LoadAssembliesAsync(new List<string>()
+                {
+                    "MyComponents.dll",
+                    "MyComponentsDependency1.dll",
+                });
+
+                await Task.Delay(2000);
+
+                lazyLoadedAssemblies.AddRange(assemblies);
+            }
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("loading assemblies failed " + ex);
+        }
+    }
+}
