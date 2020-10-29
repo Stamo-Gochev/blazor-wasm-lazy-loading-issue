@@ -1,1 +1,9 @@
 ﻿<h1>this is a dependency component</h1>
+
+<div>dependency data</div>
+<div>
+    @for (int i = 0; i < Data?.Count(); i++)
+    {
+        <div>@Data[i]</div>
+    }
+</div>
