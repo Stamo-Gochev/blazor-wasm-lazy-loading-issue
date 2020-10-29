@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWasmLazyLoading.Share
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyComponents", "MyComponents\MyComponents.csproj", "{1C17C829-1CE4-4C3D-A577-494A093294A4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyComponentsDependency1", "MyComponentsDependency1\MyComponentsDependency1.csproj", "{474F5349-3BB4-41E1-8F31-D9348C0165BA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{1C17C829-1CE4-4C3D-A577-494A093294A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C17C829-1CE4-4C3D-A577-494A093294A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C17C829-1CE4-4C3D-A577-494A093294A4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{474F5349-3BB4-41E1-8F31-D9348C0165BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{474F5349-3BB4-41E1-8F31-D9348C0165BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{474F5349-3BB4-41E1-8F31-D9348C0165BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{474F5349-3BB4-41E1-8F31-D9348C0165BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
