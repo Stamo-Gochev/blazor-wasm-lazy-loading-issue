@@ -1,5 +1,6 @@
 # blazor-wasm-lazy-loading-issue
 
+## Issue https://github.com/dotnet/aspnetcore/issues/27331
 ### Describe the bug
 Using [lazy loading of assemblies](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies?view=aspnetcore-5.0) fails when a service extension method is used.
 
