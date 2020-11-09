@@ -5,6 +5,11 @@
 
 <p>The following component is lazily loaded from MyComponents.dll:</p>
 
-<Component1 />
+@for (int i = 0; i < 100; i++)
+{
+    <Component1 />
+
+}
+@*<Component1 />*@
 
 @code { }
